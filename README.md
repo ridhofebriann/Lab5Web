@@ -277,28 +277,46 @@ Penjelasan Hasil: Struktur `switch` membandingkan nilai variabel `val1` dengan s
 Manipulasi form: mengambil input, memproses, dan menampilkan hasil di form yang sama.
 ```html
 <script language="javascript">
-    function test () {
-        var val1 = document.kirim.T1.value; // Ambil nilai T1
-        if (val1 % 2 == 0) { // Cek sisa bagi
-            document.kirim.T2.value = "bilangan genap"; // [cite: 221]
-        } else {
-            document.kirim.T2.value = "bilangan ganjil";
-        }
+  function test() {
+    var val1 = document.kirim.T1.value;
+
+    var num = parseInt(val1);
+
+    if (isNaN(num)) {
+      document.kirim.T2.value = "Input harus berupa angka!";
+      return;
     }
+
+    if (num % 2 == 0) {
+      document.kirim.T2.value = "bilangan genap";
+    } else {
+      document.kirim.T2.value = "bilangan ganjil";
+    }
+  }
 </script>
 <body>
-    <form method="POST" name="kirim">
-        <p><input type="button" value="TEBAK" name="B1" onclick="test()"></p>
-    </form>
+   
+  <form method="POST" name="kirim">
+       
+    <p>
+      BIL <input type="text" name="T1" size="20" />     MERUPAKAN BIL
+      <input type="text" name="T2" size="20" />
+    </p>
+       
+    <p><input type="button" value="TEBAK" name="B1" onclick="test()" /></p>
+     
+  </form>
 </body>
 ```
-```javascript
-var val1 = document.kirim.T1.value;
-if (val1 % 2 == 0) { document.kirim.T2.value = "bilangan genap"; }
-```
-Hasil: Jika Input T1 = 10, kolom T2 akan terisi "bilangan genap".
+Penjelasan:
 
-Penjelasan Hasil: Fungsi `test()` mengambil nilai dari field T1. Menggunakan operator modulus (`%`), kode menentukan ganjil/genap dan memasukkan hasil string ke value dari field T2.
+Fungsi test() bertugas mengonversi teks input (T1) menjadi angka (parseInt).
+
+Validasi: Kode pertama-tama mengecek apakah hasil konversi adalah angka yang valid (isNaN). Jika tidak valid, fungsi akan menampilkan error dan berhenti (return).
+
+Logika: Jika valid, ia menggunakan operator modulus (% 2) untuk menentukan sisa bagi.
+
+Output: Jika sisa bagi 0, field T2 diisi "bilangan genap"; jika tidak, diisi "bilangan ganjil".
 
 ### 10. Form Button: Ubah Warna Dokumen (`form_button_color.html`)
 Mengubah warna latar belakang dan teks dokumen menggunakan properti objek `document`.

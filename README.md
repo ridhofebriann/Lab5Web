@@ -320,38 +320,41 @@ Penjelasan Hasil: Fungsi `ubahwarnaLB` memanipulasi properti `document.bgColor` 
 ### 11. Jawaban Tugas: Validasi Form (`form_validation.html`)
 Implementasi skrip validasi sederhana untuk memastikan field tidak kosong dan format email dasar valid.
 ```html
-<head>
-    <title>Validasi Form</title>
-    <script>
-        function validateForm() {
-            var nama = document.forms["myForm"]["nama"].value;
-            // ... ambil email ...
-            if (nama == "") {
-                alert("Nama harus diisi.");
-                return false; // Mencegah form dikirim
-            }
-            // ... validasi email ...
-            return true; // Mengizinkan form dikirim
-        }
-    </script>
-</head>
-<body>
-    <form name="myForm" onsubmit="return validateForm()">
-        <input type="submit" value="Kirim Data">
-    </form>
-</body>
-```
-```javascript
-function validateForm() {
-    var nama = document.forms["myForm"]["nama"].value;
-    if (nama == "") { alert("Nama harus diisi."); return false; }
-    // ... validasi lain
+<form name="formValid" onsubmit="return validasi()">
+Nama: <input type="text" name="nama"><br>
+Email: <input type="text" name="email"><br>
+<input type="submit" value="Kirim">
+</form>
+
+<script>
+function validasi() {
+    let nama = document.forms["formValid"]["nama"].value;
+    let email = document.forms["formValid"]["email"].value;
+    if (nama == "" || email == "") {
+        alert("Nama dan Email wajib diisi!");
+        return false;
+    }
+    alert("Data berhasil dikirim!");
+    return true;
 }
-<form onsubmit="return validateForm()">
+</script>
 ```
+
 Hasil: Jika Nama kosong, proses submit dibatalkan dan muncul alert "Nama harus diisi.".
 
-Penjelasan Hasil: Fungsi `validateForm()` dipanggil oleh event `onsubmit`. Mengembalikan `false` menghentikan proses submit form, sementara `true` memungkinkan form dikirim.
+Penjelasan Hasil: Fungsi validasi() bekerja saat tombol Kirim pada formulir diklik (karena ada onsubmit="return validasi()").
+
+Pengambilan Data: Kode mengambil nilai yang diisi pada field Nama dan Email .
+
+Pengecekan: Kode memeriksa apakah nama ATAU (||) email kosong ("").
+
+Kasus Gagal: Jika salah satu atau kedua field kosong, kode menampilkan alert "Nama dan Email wajib diisi!" dan mengembalikan return false.
+
+Hasil: Nilai false ini akan menghentikan proses pengiriman formulir.
+
+Kasus Berhasil: Jika kedua field terisi, kode menampilkan alert "Data berhasil dikirim!" dan mengembalikan return true.
+
+Hasil: Nilai true ini akan melanjutkan proses pengiriman formulir ke server
 
 ### 12. HTML DOM: Perhitungan Otomatis CheckBox (daftar_menu.html)
 HTML DOM (Document Object Model) untuk melakukan perhitungan otomatis dari total harga menu yang dipilih menggunakan checkbox.

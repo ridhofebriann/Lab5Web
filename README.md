@@ -21,7 +21,6 @@ Tujuan dari praktikum ini adalah agar mahasiswa mampu:
 Struktur proyek ini disusun untuk memuat semua kode latihan yang disajikan dalam modul praktikum. Semua file adalah dokumen HTML tunggal, kecuali untuk latihan eksternal JS (jika dikerjakan).
 
 Lab5Web/
-
 ├── lab5_javascript.html (Latihan dasar: document.write, console.log)
 
 ├── alert_box.html (Contoh penggunaan window.alert)
@@ -32,7 +31,7 @@ Lab5Web/
 
 ├── function_onload.html (Contoh fungsi dipanggil melalui event body onload)
 
-├── arithmetic_operations.html (Contoh operasi aritmatika) <-- DIUBAH
+├── arithmetic_operations.html (Contoh operasi aritmatika) 
 
 ├── if_else_selection.html (Contoh seleksi kondisi if..else)
 
@@ -42,13 +41,16 @@ Lab5Web/
 
 ├── form_button_color.html (Contoh manipulasi document color dengan button)
 
-├── form_validation.html (Jawaban Tugas: Script validasi form)
+├── HTML DOM: Perhitungan Otomatis CheckBox (daftar_menu.html)
+
+├──form_validation.html (Jawaban Tugas: Script validasi form)
+
 
 └── README.md
 
 ---
 
-## 💻 Langkah-langkah Praktikum dan Contoh Kode (11 File)
+## 💻 Langkah-langkah Praktikum dan Contoh Kode (12 File)
 
 Berikut adalah ringkasan, contoh kode, serta **hasil dan penjelasan** dari setiap langkah praktikum:
 

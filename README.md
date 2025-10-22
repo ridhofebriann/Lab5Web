@@ -322,30 +322,35 @@ Output: Jika sisa bagi 0, field T2 diisi "bilangan genap"; jika tidak, diisi "bi
 Mengubah warna latar belakang dan teks dokumen menggunakan properti objek `document`.
 ```html
 <script language="javascript">
-    function ubahwarnaLB (warna) { 
-        document.bgColor = warna;  
-    }
-    function ubahwarnaLD (warna) {
-        document.fgColor = warna;  
-    }
+  function ubahwarnaLB(warna) {
+    document.bgColor = warna;
+  }
+  function ubahwarnaLD(warna) {
+    // <--- DEFINISI FUNGSI
+    document.fgColor = warna; // <--- PASTIKAN BARIS INI ADA
+  }
 </script>
 <body>
-    <h1>tes</h1>
-    <form>
-        <input type="button" value="Latar Belakang Hijau" onclick="ubahwarnaLB('GREEN')">
-        <input type="button" value="Teks Biru" onClick="ubahWarnaLD('BLUE')">
-    </form>
-    <script> document.write("Dimodifikasi terakhir pada " + document.lastModified); </script>
+  <h1>tes</h1>
+
+  <form>
+    <input
+      type="button"
+      value="Latar Belakang Hijau"
+      onclick="ubahwarnaLB('GREEN')"
+    />
+
+    <input type="button" value="Teks Biru" onclick="ubahwarnaLD('BLUE')" />  
+  </form>
 </body>
 ```
-```javascript
-function ubahwarnaLB (warna) { document.bgColor = warna; }
-// ...
-<input type="button" onclick="ubahwarnaLB('GREEN')">
-```
-Hasil: Klik Latar Belakang Hijau mengubah latar belakang menjadi hijau. Klik Teks Biru mengubah warna teks menjadi biru.
+Kode ini mendefinisikan dua fungsi untuk memanipulasi properti tampilan dokumen:
 
-Penjelasan Hasil: Fungsi `ubahwarnaLB` memanipulasi properti `document.bgColor` , dan `ubahwarnaLD` memanipulasi `document.fgColor`.
+ubahwarnaLB(warna): Mengatur warna latar belakang halaman melalui properti document.bgColor.
+
+ubahwarnaLD(warna): Mengatur warna teks di halaman melalui properti document.fgColor.
+
+Fungsi-fungsi ini dipanggil oleh tombol yang sesuai di HTML melalui event onclick dengan meneruskan nama warna (misalnya, 'GREEN' atau 'BLUE').
 
 ### 11. Jawaban Tugas: Validasi Form (`form_validation.html`)
 Implementasi skrip validasi sederhana untuk memastikan field tidak kosong dan format email dasar valid.

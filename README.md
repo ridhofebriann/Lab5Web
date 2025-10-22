@@ -83,6 +83,10 @@ Contoh dasar penulisan kode JavaScript di dalam tag `<body>` .
 </body>
 </html>
 ```
+**TAMPILAN dan VSCODE**
+
+<img src="images/lab5.png" width="700">
+
 Hasil : Teks "Hello World" muncul di halaman web dan di Console browser .
 
 Penjelasan Hasil:  `document.write()` menulis konten ke dokumen HTML. `console.log()` menulis pesan ke konsol browser untuk debugging.
@@ -101,6 +105,9 @@ Membuat kotak peringatan (alert box) saat halaman dimuat
 ```javascript
 window.alert("ini merupakan pesan untuk anda");
 ```
+**TAMPILAN dan VSCODE**
+
+<img src="images/alert.png" width="700">
 
 Hasil: Sebuah kotak dialog peringatan (alert box) muncul dengan pesan "ini merupakan pesan untuk anda".
 
@@ -123,6 +130,10 @@ Contoh penggunaan `document.write` untuk menampilkan beberapa baris teks.
 document.write("selamat mencoba javascript<br>");
 document.write("semoga sukses!");
 ```
+**TAMPILAN dan VSCODE**
+
+<img src="images/write.png" width="700">
+
 Hasil: 
 Halaman akan menampilkan:
 ```
@@ -148,6 +159,12 @@ Menggunakan fungsi `prompt` untuk mendapatkan input dari pengguna.
 var nama = prompt("siapa nama anda?", "masukkan nama anda");
 document.write("hai, " + nama);
 ```
+**TAMPILAN dan VSCODE**
+
+<img src="images/prompt.png" width="700">
+
+<img src="images/prompt2.png" width="700">
+
 Hasil :  Muncul prompt box. Jika nama diisi "ridho", halaman menampilkan "hai, ridho".
 
 Penjelasan Hasil: Fungsi `prompt()` meminta input teks dari pengguna dan menyimpannya dalam variabel `nama`.
@@ -172,6 +189,10 @@ function pesan(){ alert ("memanggil javascript lewat body onload") }
 // ...
 <body onload="pesan()">
 ```
+**TAMPILAN dan VSCODE**
+
+<img src="images/onload.png" width="700">
+
 Hasil:  Setelah halaman dimuat, alert box otomatis muncul dengan pesan "memanggil javascript lewat body onload".
 
 Penjelasan Hasil: Atribut `onload` pada `<body>` adalah event handler yang mengeksekusi fungsi `pesan()` setelah semua elemen halaman selesai dimuat.
@@ -209,6 +230,10 @@ var a = 10; var b = 5;
 document.write("Penjumlahan: " + (a + b) + "<br>"); // Hasil 15
 // ... operasi lainnya
 ```
+**TAMPILAN dan VSCODE**
+
+<img src="images/arimatika.png" width="700">
+
 Hasil:  Halaman akan menampilkan:
 ```
 Hasil Penjumlahan: 15
@@ -240,6 +265,12 @@ Contoh seleksi kondisi untuk menentukan kelulusan berdasarkan nilai input.
 if (nilai >= 60) { hasil = "lulus"; } else { hasil = "tidak lulus"; }
 document.write("hasil: " + hasil);
 ```
+**TAMPILAN dan VSCODE**
+
+<img src="images/if_else.png" width="700">
+
+<img src="images/if_else2.png" width="700">
+
 Hasil: Jika Input 75, hasil "lulus". Jika Input 55, hasil "tidak lulus".
 
 Penjelasan Hasil: Pernyataan `if (nilai >= 60)` mengecek kondisi. Jika benar, variabel `hasil` diisi "lulus"; jika salah (blok `else`), diisi "tidak lulus".
@@ -269,6 +300,12 @@ switch (val1) {
     default: document.write("bilangan lainnya");
 }
 ```
+**TAMPILAN dan VSCODE**
+
+<img src="images/switch.png" width="700">
+
+<img src="images/switch2.png" width="700">
+
 Hasil:  Setelah klik tombol, muncul prompt. Jika Input 3, halaman menampilkan "bilangan tiga".
 
 Penjelasan Hasil: Struktur `switch` membandingkan nilai variabel `val1` dengan serangkaian `case`. Jika cocok, kode di bawah case tersebut dieksekusi, dan `break`menghentikan eksekusi.
@@ -308,6 +345,10 @@ Manipulasi form: mengambil input, memproses, dan menampilkan hasil di form yang 
   </form>
 </body>
 ```
+**TAMPILAN dan VSCODE**
+
+<img src="images/tebak_bil.png" width="700">
+
 Penjelasan:
 
 Fungsi test() bertugas mengonversi teks input (T1) menjadi angka (parseInt).
@@ -344,6 +385,12 @@ Mengubah warna latar belakang dan teks dokumen menggunakan properti objek `docum
   </form>
 </body>
 ```
+**TAMPILAN dan VSCODE**
+
+<img src="images/button_color.png" width="700">
+
+penjelasan:
+
 Kode ini mendefinisikan dua fungsi untuk memanipulasi properti tampilan dokumen:
 
 ubahwarnaLB(warna): Mengatur warna latar belakang halaman melalui properti document.bgColor.
@@ -374,6 +421,9 @@ function validasi() {
 }
 </script>
 ```
+**TAMPILAN dan VSCODE**
+
+<img src="images/form_validasi.png" width="700">
 
 Hasil: Jika Nama kosong, proses submit dibatalkan dan muncul alert "Nama harus diisi.".
 
@@ -437,6 +487,10 @@ function hitung(ele) {
     document.getElementById('total').value = total;
 }
 ```
+**TAMPILAN dan VSCODE**
+
+<img src="images/daftar_menu.png" width="700">
+
 Hasil:
 Awalnya, kotak input Total Bayar kosong (atau 0).
 

@@ -1,0 +1,16 @@
+<script language="javascript">
+  function test() {
+    val1 = window.prompt("input nilai (1-5):");
+    switch (val1) {
+      case "1":
+        document.write("bilangan satu");
+        break;
+      // ... cases 2, 3, 4, 5 ...
+      default:
+        document.write("bilangan lainnya");
+    }
+  }
+</script>
+<body>
+  <input type="button" name="button" value="switch" onclick="test()" />
+</body>

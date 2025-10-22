@@ -1,0 +1,16 @@
+<script language="javascript">
+  function test() {
+    var val1 = document.kirim.T1.value; // Ambil nilai T1
+    if (val1 % 2 == 0) {
+      // Cek sisa bagi
+      document.kirim.T2.value = "bilangan genap"; // [cite: 221]
+    } else {
+      document.kirim.T2.value = "bilangan ganjil";
+    }
+  }
+</script>
+<body>
+  <form method="POST" name="kirim">
+    <p><input type="button" value="TEBAK" name="B1" onclick="test()" /></p>
+  </form>
+</body>

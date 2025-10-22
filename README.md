@@ -1,3 +1,14 @@
+````markdown
+# 🧾 LAPORAN PRAKTIKUM 5 – JAVASCRIPT
+
+Nama: M.Ridho Febrian
+NIM: 312410500
+Kelas: TI.24.A.5  
+Mata Kuliah: Pemrograman Web  
+Dosen Pengampu: Agung Nugroho, S.Kom., M.Kom  
+Universitas: Pelita Bangsa  
+Praktikum ke: 5  
+---
 
 # Lab5Web: Praktikum 5 - JavaScript Dasar
 
@@ -21,6 +32,7 @@ Tujuan dari praktikum ini adalah agar mahasiswa mampu:
 Struktur proyek ini disusun untuk memuat semua kode latihan yang disajikan dalam modul praktikum. Semua file adalah dokumen HTML tunggal, kecuali untuk latihan eksternal JS (jika dikerjakan).
 
 Lab5Web/
+
 ├── lab5_javascript.html (Latihan dasar: document.write, console.log)
 
 ├── alert_box.html (Contoh penggunaan window.alert)
@@ -49,7 +61,7 @@ Lab5Web/
 └── README.md
 
 ---
-
+````
 ## 💻 Langkah-langkah Praktikum dan Contoh Kode (12 File)
 
 Berikut adalah ringkasan, contoh kode, serta **hasil dan penjelasan** dari setiap langkah praktikum:

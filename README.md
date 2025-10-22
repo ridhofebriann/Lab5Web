@@ -302,9 +302,9 @@ switch (val1) {
 ```
 **TAMPILAN dan VSCODE**
 
-<img src="images/switch.png" width="700">
-
 <img src="images/switch2.png" width="700">
+
+<img src="images/swift2.png" width="700">
 
 Hasil:  Setelah klik tombol, muncul prompt. Jika Input 3, halaman menampilkan "bilangan tiga".
 
